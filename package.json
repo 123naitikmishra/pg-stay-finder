@@ -1,0 +1,19 @@
+{
+  "name": "pg-stay-finder",
+  "version": "1.0.0",
+  "description": "Premium PG & Stay Finder SaaS application",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm install --workspace=client && npm install --workspace=server",
+    "client": "npm run dev --workspace=client",
+    "server": "npm run start --workspace=server",
+    "dev": "npx concurrently \"npm run client\" \"npm run server\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
