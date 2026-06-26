@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 
 export default function Navbar() {
-  const { currentUser, logout, switchRole } = useAuth();
+  const { currentUser, login, logout, switchRole } = useAuth();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
